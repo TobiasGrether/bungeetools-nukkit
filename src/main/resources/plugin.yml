@@ -1,0 +1,5 @@
+name: WaterdogTools
+authors: ["TobiasDev", "Waterdog Team"]
+version: "1.2"
+api-version: 1.0.9
+main: com.tobiasdev.waterdogtools.nukkit.WaterdogTools
