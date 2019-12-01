@@ -8,6 +8,7 @@ public class WaterdogTools extends PluginBase {
     private RequestPool pool;
     private static WaterdogTools instance;
 
+    
     @Override
     public void onEnable() {
         instance = this;
