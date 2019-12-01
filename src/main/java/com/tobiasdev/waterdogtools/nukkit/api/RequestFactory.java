@@ -4,7 +4,6 @@ import cn.nukkit.Player;
 import cn.nukkit.network.protocol.ScriptCustomEventPacket;
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
-import com.sun.istack.internal.NotNull;
 import com.tobiasdev.waterdogtools.nukkit.WaterdogTools;
 
 import java.util.HashMap;
@@ -27,7 +26,7 @@ public class RequestFactory {
      * @param action
      * @return
      */
-    public RequestFactory setHandler(@NotNull RequestResponseAction action) {
+    public RequestFactory setHandler(RequestResponseAction action) {
         this.action = action;
         return this;
     }
@@ -38,7 +37,7 @@ public class RequestFactory {
      * @param player
      * @return
      */
-    public RequestFactory setPlayer(@NotNull Player player) {
+    public RequestFactory setPlayer(Player player) {
         this.player = player;
         return this;
     }
@@ -50,7 +49,7 @@ public class RequestFactory {
      * @return
      * @see RequestType
      */
-    public RequestFactory setType(@NotNull RequestType.TYPES type) {
+    public RequestFactory setType(RequestType.TYPES type) {
         this.type = type;
         return this;
     }
@@ -61,7 +60,7 @@ public class RequestFactory {
      * @param data
      * @return
      */
-    public RequestFactory setData(@NotNull HashMap<String, String> data) {
+    public RequestFactory setData(HashMap<String, String> data) {
         this.data = data;
         return this;
     }
@@ -77,7 +76,7 @@ public class RequestFactory {
         return r;
     }
 
-    private void sendRequest(@NotNull Request r) {
+    private void sendRequest(Request r) {
         ScriptCustomEventPacket pk = new ScriptCustomEventPacket();
         pk.eventName = "bungeecord:main";
         ByteArrayDataOutput out = ByteStreams.newDataOutput();
